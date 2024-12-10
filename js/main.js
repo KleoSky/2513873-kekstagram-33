@@ -1,4 +1,4 @@
-import './likes.js'
+import './likes.js';
 import { openEditingForm } from './form.js';
 import { initImageScale } from './scale.js';
 import { getData } from './network.js';

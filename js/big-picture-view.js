@@ -1,5 +1,5 @@
 import { isEscapeKey } from './util.js';
-import { paintLikes, rebootLikes } from './likes.js';
+//import { paintLikes, rebootLikes } from './likes.js';
 
 const COMMENTS_VISIBLE = 5;
 const COMMENTS_MIN = 0;
@@ -12,7 +12,7 @@ const commentsLoader = bigPicture.querySelector('.comments-loader');
 const socialComments = bigPicture.querySelector('.social__comments');
 const socialCommentsItem = bigPicture.querySelector('.social__comment');
 const closeBigPictureButton = document.querySelector('.big-picture__cancel');
-let likesCount = document.querySelector('.likes-count');
+const likesCount = document.querySelector('.likes-count');
 let totalCommentsCount;
 let shownCommentCount;
 
@@ -94,7 +94,7 @@ const openBigPhoto = (previews) => {
   showPortionComments();
   paintBigPhoto(previews);
   //likesCounter(likesCount);
-  paintLikes();
+  //paintLikes();
 };
 
 // Закрытие большого фото
