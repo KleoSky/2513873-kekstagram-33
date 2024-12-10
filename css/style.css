@@ -855,14 +855,16 @@ main {
 .social__likes {
   margin: 0;
   margin-left: auto;
-  min-width: 125px;
+  min-width: 135px;
+  border: none;
 }
 
 .likes-count {
   position: relative;
   padding-left: 30px;
 
-  color: #f48181;
+  /* color: #f48181; */
+  color: #e90000;
 
   cursor: pointer;
 }
@@ -871,7 +873,7 @@ main {
   color: #e90000;
 }
 
-.likes-count::before {
+/* .likes-count::before {
   content: "";
   position: absolute;
 
@@ -886,6 +888,21 @@ main {
 
   background-position: -5px -56px;
   opacity: 0.5;
+} */
+
+.heart {
+  display: block;
+  width: 20px;
+  height: 18px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: 78px -53px;
+}
+
+.heart:hover, .added {
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: 78px -78px;
 }
 
 .likes-count:hover::before,

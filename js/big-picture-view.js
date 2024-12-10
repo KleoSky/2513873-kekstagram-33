@@ -1,4 +1,5 @@
 import { isEscapeKey } from './util.js';
+import { paintLikes, rebootLikes } from './likes.js';
 
 const COMMENTS_VISIBLE = 5;
 const COMMENTS_MIN = 0;
@@ -11,6 +12,7 @@ const commentsLoader = bigPicture.querySelector('.comments-loader');
 const socialComments = bigPicture.querySelector('.social__comments');
 const socialCommentsItem = bigPicture.querySelector('.social__comment');
 const closeBigPictureButton = document.querySelector('.big-picture__cancel');
+let likesCount = document.querySelector('.likes-count');
 let totalCommentsCount;
 let shownCommentCount;
 
@@ -62,7 +64,7 @@ const paintBigPhoto = (previews) => {
   bigPicture.querySelector('.big-picture__img').dataset.id = previews.id;
   bigPicture.querySelector('.big-picture__img img').src = previews.url;
   bigPicture.querySelector('.big-picture__img img').alt = previews.description;
-  bigPicture.querySelector('.likes-count').textContent = previews.likes;
+  likesCount.textContent = previews.likes;
   bigPicture.querySelector('.social__caption').textContent = previews.description;
 };
 
@@ -91,6 +93,8 @@ const openBigPhoto = (previews) => {
   shownCommentCount = 0;
   showPortionComments();
   paintBigPhoto(previews);
+  //likesCounter(likesCount);
+  paintLikes();
 };
 
 // Закрытие большого фото
@@ -99,6 +103,7 @@ function closeBigPhoto () {
   bigPicture.classList.add('hidden');
   document.body.classList.remove('modal-open');
   document.removeEventListener('keydown', onBigPhotoEscKeydown);
+  //rebootLikes();
 }
 
 export { openBigPhoto };

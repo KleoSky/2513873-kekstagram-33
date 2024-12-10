@@ -1,14 +1,17 @@
+//import { likesCounter } from "./likes";
+
 const photosContainer = document.querySelector('.pictures');
 const templatePicture = document.querySelector('#picture').content;
 
 // Создание миниатюр
 const createPreview = (preview) => {
   const userPhotoContainer = templatePicture.cloneNode(true);
+  let previewLikesCount = userPhotoContainer.querySelector('.picture__likes');
   userPhotoContainer.querySelector('.picture').dataset.id = preview.id;
   userPhotoContainer.querySelector('.picture__img').src = preview.url;
   userPhotoContainer.querySelector('.picture__img').alt = preview.description;
   userPhotoContainer.querySelector('.picture__comments').textContent = preview.comments.length;
-  userPhotoContainer.querySelector('.picture__likes').textContent = preview.likes;
+  previewLikesCount.textContent = preview.likes;
 
   return userPhotoContainer;
 };
