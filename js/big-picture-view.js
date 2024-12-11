@@ -97,21 +97,24 @@ const openBigPhoto = (previews) => {
   showPortionComments();
   paintBigPhoto(previews);
 
-  if (likesButton.classList.contains('added')) {
-    likesButton.classList.remove('added');
-  }
+ if (previews.isLiked) {
+  likesButton.classList.add('added');
+  likesCount.textContent = parseInt(likesCount.textContent) + 1;
+} else {
+  likesButton.classList.remove('added');
+  likesCount.textContent = parseInt(likesCount.textContent);
+}
 
-  likesButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      if (button.classList.contains('added')) {
-        likesCount.textContent--;
-      } else {
-        likesCount.textContent++;
-      }
-      button.classList.toggle('added');
-    })
-    return likesCount.textContent;
-  })
+likesButton.addEventListener('click', () => {
+  if (likesButton.classList.contains('added')) {
+    likesCount.textContent--;
+    previews.isLiked = false;
+  } else {
+    likesCount.textContent++;
+    previews.isLiked = true;
+  }
+  likesButton.classList.toggle('added');
+});
 };
 
 // Закрытие большого фото
