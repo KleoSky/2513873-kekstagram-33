@@ -2,14 +2,16 @@ const likesButton = document.querySelector('.social__likes');
 
 
 const likesCounter = (count) => {
-  likesButton.classList.toggle('added');
-  if (likesButton.classList.contains('added')) {
-    count.textContent++;
-  } else {
-    count.textContent--;
-  }
+  likesButton.addEventListener('click', () => {
+    likesButton.classList.toggle('added');
+    if (likesButton.classList.contains('added')) {
+      count.textContent++;
+    } else {
+      count.textContent--;
+    }
+  })
 };
-likesCounter();
+//likesCounter(count);
 // const paintLikes = () => {
 //   likesButton.addEventListener('click', likesCounter(count));
 // };
@@ -19,3 +21,4 @@ likesCounter();
 // }
 
 // export {paintLikes, rebootLikes};
+export { likesCounter };

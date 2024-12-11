@@ -897,6 +897,7 @@ main {
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   background-position: 78px -53px;
+  background-color: transparent;
 }
 
 .heart:hover, .added {

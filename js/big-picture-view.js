@@ -1,5 +1,6 @@
 import { isEscapeKey } from './util.js';
 //import { paintLikes, rebootLikes } from './likes.js';
+import { likesCounter } from './likes.js';
 
 const COMMENTS_VISIBLE = 5;
 const COMMENTS_MIN = 0;
@@ -93,7 +94,7 @@ const openBigPhoto = (previews) => {
   shownCommentCount = 0;
   showPortionComments();
   paintBigPhoto(previews);
-  //likesCounter(likesCount);
+  likesCounter(likesCount);
   //paintLikes();
 };
 
