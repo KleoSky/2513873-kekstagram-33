@@ -1,19 +1,29 @@
-const likesButton = document.querySelector('.social__likes');
+// const likesButton = document.querySelector('.social__likes');
 
 
-const likesCounter = (count) => {
-  likesButton.addEventListener('click', () => {
-    likesButton.classList.toggle('added');
-    if (likesButton.classList.contains('added')) {
-      count.textContent++;
-    } else {
-      count.textContent--;
-    }
-  })
-};
-//likesCounter(count);
-// const paintLikes = () => {
-//   likesButton.addEventListener('click', likesCounter(count));
+// const likesCounter = (count) => {
+//   likesButton.addEventListener('click', () => {
+//     likesButton.classList.toggle('added');
+//     if (likesButton.classList.contains('added')) {
+//       count.textContent++;
+//     } else {
+//       count.textContent--;
+//     }
+//   })
+// };
+
+// const likesCounter = (count) => {
+//     likesButton.classList.toggle('added');
+//     if (likesButton.classList.contains('added')) {
+//       count.textContent++;
+//     } else {
+//       count.textContent--;
+//     }
+// };
+
+// likesCounter(count);
+// const onLikesButtonClick = () => {
+//   likesCounter(likesCount);
 // };
 
 // const rebootLikes = () => {
@@ -21,4 +31,4 @@ const likesCounter = (count) => {
 // }
 
 // export {paintLikes, rebootLikes};
-export { likesCounter };
+// export { likesCounter };
