@@ -14,7 +14,7 @@ const socialComments = bigPicture.querySelector('.social__comments');
 const socialCommentsItem = bigPicture.querySelector('.social__comment');
 const closeBigPictureButton = document.querySelector('.big-picture__cancel');
 const likesCount = document.querySelector('.likes-count');
-const likesButtons = document.querySelectorAll('.social__likes');
+//const likesButtons = document.querySelectorAll('.social__likes');
 const likesButton = document.querySelector('.social__likes');
 let totalCommentsCount;
 let shownCommentCount;
@@ -124,15 +124,14 @@ function closeBigPhoto() {
   document.body.classList.remove('modal-open');
   document.removeEventListener('keydown', onBigPhotoEscKeydown);
 
-  likesButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      if (button.classList.contains('added')) {
-        likesCount.textContent--;
-      } else {
-        likesCount.textContent++;
-      }
-      button.classList.toggle('added');
-    });
+  likesButton.addEventListener('click', () => {
+    if (likesButton.classList.contains('added')) {
+      likesCount.textContent--;
+
+    } else {
+      likesCount.textContent++;
+    }
+    likesButton.classList.toggle('added');
   });
 }
 
