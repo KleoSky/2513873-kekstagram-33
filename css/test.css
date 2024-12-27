@@ -1,0 +1,55 @@
+body {
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #000000;
+  min-width: 1140px;
+  background-color: #FFFDF8;
+}
+
+.wysiwyg__wrapper {
+  min-width: 1140px;
+  background-color: #FFFDF8;
+  padding: 72px 165px 114px 165px;
+  font-size: 18px;
+  color: #000000;
+}
+
+.wysiwyg__wrapper blockquote {
+  font-weight: 300;
+  font-size: 24px;
+  font-style: italic;
+  color: #9F7303;
+}
+
+.wysiwyg__wrapper h1,
+.wysiwyg__wrapper h2,
+.wysiwyg__wrapper h3 {
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.wysiwyg__wrapper h1 {
+  font-size: 48px;
+}
+
+.wysiwyg__wrapper h2 {
+  font-size: 40px;
+}
+
+.wysiwyg__wrapper h3 {
+  font-size: 32px;
+}
+
+.wysiwyg__wrapper ol,
+.wysiwyg__wrapper ul {
+  margin: 0;
+  margin-bottom: 56px;
+  margin-left: 32px;
+  padding: 0;
+}
+
+.wysiwyg__wrapper li {
+  margin-bottom: 16px;
+}
