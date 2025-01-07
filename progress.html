@@ -13,17 +13,24 @@
 <body class="page">
   <header class="page__header header">
     <div class="header__wrapper header-wrapper">
-      <img class="header-wrapper__logo" src="./img/Test-work/header-logo.svg" alt="Логотип компании INTERIOR LOUNGE">
+      <img class="header-wrapper__logo" src="./img/Test-work/header-logo.svg" width="262" height="47"
+        alt="Логотип компании INTERIOR LOUNGE">
       <nav class="header-wrapper__navigation navigation">
         <ul class="navigation__list">
           <li class="navigation__item select">
             <span class="select__title">Наши проекты</span>
             <button class="select__button" type="button"></button>
-            <select>
-              <option>Tomazzi Hall</option>
-              <option>Lounge Hall</option>
-              <option>Astra Hall</option>
-            </select>
+            <ul class="select__list hidden">
+              <li class="select__item">
+                <a class="select__link" href="#">Tomazzi Hall</a>
+              </li>
+              <li class="select__item">
+                <a class="select__link" href="#">Lounge Hall</a>
+              </li>
+              <li class="select__item">
+                <a class="select__link" href="#">Astra Hall</a>
+              </li>
+            </ul>
           </li>
           <li class="navigation__item">Контакты</li>
           <li class="navigation__item">
@@ -38,9 +45,8 @@
       <h1>Дизайн общественных интерьеров</h1>
       <h2>Кейс клубного дома Tomazzi Hall</h2>
       <div class="front-image-wrapper">
-        <img src="./img/Test-work/front-image.jpg" alt="Клубный дом Tomazzi Hall">
+        <img src="./img/Test-work/front-image.jpg" width="1100" height="400" alt="Клубный дом Tomazzi Hall">
       </div>
-      <h3>Начало работы и источники вдохновения</h3>
       <p>Создать объект, подобного которому в Санкт-Петербурге еще не было, — такую задачу
         поставил перед собой девелопер Interior Lounge, продумывая клубный дом Tomazzi Hall.
         Над экстерьером комплекса работала команда одного из крупнейших архитектурных
@@ -75,36 +81,38 @@
     </div>
   </main>
   <footer class="page__footer footer">
-    <h3 class="footer__title">Оставить отзыв </h3>
-    <form class="footer__form form" action="" method="post">
-      <textarea class="form__feedback" placeholder="Расскажите, что вы думаете о проекте"></textarea>
-      <label class="form__label" for="name">
+    <div class="footer__wrapper">
+      <h3 class="footer__title">Оставить отзыв </h3>
+      <form class="footer__form form" action="" method="post">
+        <textarea class="form__feedback" placeholder="Расскажите, что вы думаете о проекте"></textarea>
+        <label class="visually-hidden" for="name">Введите Ваше имя</label>
         <input class="form__input" name="user-name" id="name" type="text" placeholder="Ваше имя">
-      </label>
-      <button class="form__button" type="submit">Отправить</button>
-      <span class="form__explanatory-text">Отзыв будет добавлен после проверки модератором</span>
-    </form>
-    <div class="footer__comments comments">
-      <article class="comments__user user">
-        <img class="user__avatar" src="./img/Test-work/user-one.jpg" alt="Пользователь">
-        <span class="user__name">Иван Грачев</span>
-        <p class="user__comment-text">Очень самобытный и необычный проект.</p>
-      </article>
-      <article class="comments__user user">
-        <img class="user__avatar" src="./img/Test-work/user-two.jpg" alt="Пользователь">
-        <span class="user__name">Мария Рачинская</span>
-        <p class="user__comment-text">Мне особенно понравилось решение лестничных клеток.
-          Кружки вообще очень стильные!</p>
-      </article>
-      <article class="comments__user user">
-        <img class="user__avatar" src="./img/Test-work/user-three.jpg" alt="Пользователь">
-        <span class="user__name">Светлана</span>
-        <p class="user__comment-text">Очень нравится, что в городе развиваются такие проекты. Надеюсь, такие проекты
-          скоро будут не только в частных домах, но и в кафе, музеях, театрах.
-          Я бы сходила!</p>
-      </article>
+        <button class="form__button" type="submit">Отправить</button>
+        <span class="form__explanatory-text">Отзыв будет добавлен после проверки модератором</span>
+      </form>
+      <div class="footer__comments comments">
+        <article class="comments__user user">
+          <img class="user__avatar" src="./img/Test-work/user-one.jpg" width="50" height="50" alt="Пользователь">
+          <span class="user__name">Иван Грачев</span>
+          <p class="user__comment-text">Очень самобытный и необычный проект.</p>
+        </article>
+        <article class="comments__user user">
+          <img class="user__avatar" src="./img/Test-work/user-two.jpg" width="50" height="50" alt="Пользователь">
+          <span class="user__name">Мария Рачинская</span>
+          <p class="user__comment-text">Мне особенно понравилось решение лестничных клеток.
+            Кружки вообще очень стильные!</p>
+        </article>
+        <article class="comments__user user">
+          <img class="user__avatar" src="./img/Test-work/user-three.jpg" width="50" height="50" alt="Пользователь">
+          <span class="user__name">Светлана</span>
+          <p class="user__comment-text">Очень нравится, что в городе развиваются такие проекты. Надеюсь, такие проекты
+            скоро будут не только в частных домах, но и в кафе, музеях, театрах.<br>
+            Я бы сходила!</p>
+        </article>
+      </div>
     </div>
   </footer>
+  <script src="js/test-work.js"></script>
 </body>
 
 </html>
