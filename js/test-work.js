@@ -7,4 +7,4 @@ selectButton.addEventListener('click', () => {
   } else {
     selectList.classList.add('hidden');
   }
-})
+});
