@@ -11,7 +11,7 @@ body {
 .wysiwyg__wrapper {
   width: 1110px;
   background-color: #FFFDF8;
-  padding: 72px 165px 114px 165px;
+  padding: 72px 165px 31px 165px;
   font-size: 18px;
   color: #000000;
 }
@@ -19,7 +19,7 @@ body {
 .wysiwyg__wrapper blockquote {
   width: 920px;
   text-align: center;
-  margin: 83px auto 0 auto;
+  margin: 83px auto;
   padding: 40px 97px;
   font-weight: 300;
   font-size: 24px;
@@ -58,12 +58,26 @@ body {
 .wysiwyg__wrapper ul {
   margin: 0;
   margin-bottom: 56px;
-  margin-left: 32px;
   padding: 0;
+  padding-left: 22px;
 }
 
 .wysiwyg__wrapper li {
   margin-bottom: 16px;
+  position: relative;
+  list-style: none;
+}
+
+.wysiwyg__wrapper li::after {
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #f5d581;
+  display: block;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 10px;
+  left: -20px;
 }
 
 .wysiwyg__wrapper p {
